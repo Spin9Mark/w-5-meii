@@ -32,6 +32,7 @@
                                 <th scope="col">ชื่อ-นามสกุล</th>
                                 <th scope="col">เบอร์ติดต่อ</th>
                                 <th scope="col">ที่อยู่</th>
+                                <th scope="col" colspan="2">จัดการ</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -51,6 +52,16 @@
                                                 <td><?= htmlspecialchars($sufferer['full_name']) ?></td>
                                                 <td><?= htmlspecialchars($sufferer['tel']) ?></td>
                                                 <td><?= htmlspecialchars($sufferer['address']) ?></td>
+                                                <td style="width: 1%;">
+                                                    <a href="php/delete_sufferer.php?c_id=<?= htmlspecialchars($sufferer['c_id']) ?>" class="btn btn-danger btn-sm w-100">
+                                                        <i class="bi bi-trash-fill"></i> ลบ
+                                                    </a>
+                                                </td>
+                                                <td style="width: 1%;">
+                                                    <a href="edit_sufferer.php?c_id=<?= htmlspecialchars($sufferer['c_id']) ?>" class="btn btn-warning btn-sm w-100">
+                                                        <i class="bi bi-pencil-square"></i> แก้ไข
+                                                    </a>
+                                                </td>
                                             </tr>
                                         <?php
                                     }
