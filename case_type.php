@@ -18,9 +18,6 @@
 
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <h2 class="text-primary fw-bold">ข้อมูลประเภทคดี</h2>
-                    <a href="add_case_type.php" class="btn btn-primary">
-                        <i class="bi bi-plus-circle-fill me-2"></i> เพิ่มประเภทคดี
-                    </a>
                 </div>
 
                 <div class="table-responsive">
