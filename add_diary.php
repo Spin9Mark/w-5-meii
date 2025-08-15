@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="th">
+<!-- (เปลี่ยนแปลง) เพิ่ม data-bs-theme="dark" เพื่อเปิดใช้งาน Dark Mode -->
+<html lang="th" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,8 @@
         }
     </style>
 </head>
-<body class="bg-body-tertiary">
+<!-- (เปลี่ยนแปลง) เปลี่ยนคลาสเป็น bg-dark -->
+<body class="bg-dark">
 
     <?php include('includes/navbar.php'); ?>
 
@@ -26,17 +28,21 @@
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7">
 
-                <div class="card shadow-lg border-0 rounded-4">
+                <!-- (เปลี่ยนแปลง) เพิ่มคลาส border และ border-secondary -->
+                <div class="card shadow-lg border border-secondary">
                     <div class="card-body p-4 p-md-5">
 
-                        <!-- Header แบบ Minimalist -->
+                        <!-- Header -->
                         <div class="text-center mb-4">
-                            <h1 class="h3 fw-bold text-primary">ลงบันทึกประจำวัน</h1>
+                            <!-- (เปลี่ยนแปลง) เปลี่ยนสีหัวข้อเป็นสีชมพู -->
+                            <h1 class="h3 fw-bold" style="color: #ff007f;">ลงบันทึกประจำวัน</h1>
                             <p class="text-muted">กรุณากรอกข้อมูลเหตุการณ์ให้ครบถ้วน</p>
                         </div>
 
                         <form action="php/insert_diary.php" method="post">
                             
+                            <!-- (หมายเหตุ) Form elements จะปรับเป็น Dark Mode อัตโนมัติ -->
+
                             <!-- Detail -->
                             <div class="input-group mb-4">
                                 <span class="input-group-text"><i class="bi bi-card-text"></i></span>
@@ -117,7 +123,8 @@
                                 <a href="police_diary.php" class="btn btn-outline-secondary btn-lg px-4">
                                     <i class="bi bi-x-circle me-2"></i>ยกเลิก
                                 </a>
-                                <button type="submit" class="btn btn-success btn-lg px-4">
+                                <!-- (เปลี่ยนแปลง) เปลี่ยนปุ่มบันทึกเป็นสีชมพู -->
+                                <button type="submit" class="btn btn-lg px-4 text-white fw-bold" style="background-color: #ff007f; border-color: #ff007f;">
                                     <i class="bi bi-save-fill me-2"></i>บันทึกข้อมูล
                                 </button>
                             </div>
